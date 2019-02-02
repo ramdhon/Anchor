@@ -4,22 +4,24 @@
 // -----------------------------------------------------------------
 
 function xo(str) {
-    var count = 0;
+    var countX = 0;
+    var countO = 0;
+    str = str.toLowerCase();
     for (var index = 0; index < str.length; index++) {
         if (str.charAt(index) === "x") {
-            count--;
+            countX++;
         } else if (str.charAt(index) === "o") {
-            count++;
+            countO++;
         }
     }
-    if (count === 0) {
+    if (countX === countO) {
         return true;
     } else {
         return false;
     }
 }
 
-console.log(xo('xoxoxo'));      // true
+console.log(xo('xoxoXo'));      // true
 console.log(xo('oxooxo'));      // false
 console.log(xo('oxo'));         // false
 console.log(xo('xxxooo'));      // true
