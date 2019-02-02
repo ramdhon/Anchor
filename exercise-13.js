@@ -8,9 +8,9 @@ function xo(str) {
     var countO = 0;
     str = str.toLowerCase();
     for (var index = 0; index < str.length; index++) {
-        if (str.charAt(index) === "x") {
+        if (str[index] === "x") {
             countX++;
-        } else if (str.charAt(index) === "o") {
+        } else if (str[index] === "o") {
             countO++;
         }
     }
